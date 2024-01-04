@@ -1,0 +1,9 @@
+.bg-img {
+    background: url("https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.z-nav {
+    z-index: 100;
+}
