@@ -23,7 +23,6 @@ export default function Section({
       <div className={` max-app-width mx-auto  h-full `}>
         <div className={`flex flex-col  ${hasText ? 'gap-12' : ''}`}>
           <div className="flex gap-4 flex-col text-center text-white">
-            
             <span  className='text-xs uppercase'>{title}</span>
             <span  className='text-xl font-bold'>{subtitle}</span>
             <span  className='text-neutral-400'>{description}</span>

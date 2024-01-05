@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` ${museo.className} `}>
-        <div className="min-h-screen flex flex-col justify-between pt-12 mx-auto">
+        <div className="min-h-screen flex flex-col justify-between mx-auto">
           <Navbar />
           {children}
           <Footer />
