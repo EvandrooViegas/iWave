@@ -51,9 +51,9 @@ export default function Cart() {
 
         {size > 0 ? (
           <div className="space-y-2">
-            <div className="flex flex-col gap-4 mt-4 border border-zinc-900 p-4 rounded-lg  overflow-y-auto max-h-[60vh]">
+            <div className="flex flex-col md:gap-4 gap-16 mt-4 border border-zinc-900 p-4 rounded-lg  overflow-y-auto max-h-[60vh]">
               {items.map((item) => (
-                <div className="flex items-center  gap-6" key={item.slug}>
+                <div className="flex flex-col md:flex-row items-center  gap-6" key={item.slug}>
                   <div className="bg-neutral-900 p-4 rounded-xl">
                     <ProductImage
                       src={item.image}
