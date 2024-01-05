@@ -1,7 +1,8 @@
+"use client"
 import React from "react";
 import Logo from "./Logo";
-import { BsBag } from "react-icons/bs";
 import links from "./links";
+import Cart from "./Cart";
 export default function Navbar() {
   return (
     <nav className="z-nav fixed top-0 inset-x-0  border-b border-neutral-800 bg-background">
@@ -18,12 +19,8 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <button className="relative text-xl">
-          <BsBag />
-          <div className="absolute bg-red-600 rounded-full w-5 h-5  flex items-center justify-center p-1 text-xs top-1/2 left-1/2">
-            3
-          </div>
-        </button>
+<Cart />
+
       </div>
     </nav>
   );
