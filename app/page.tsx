@@ -12,7 +12,6 @@ export default function Home() {
     </div>
     </div>
     <Products />
-    nao acabei porque tava com sono
   </main>
   
   )

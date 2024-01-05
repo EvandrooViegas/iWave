@@ -1,21 +1,21 @@
 import Section from "@/components/Section";
 import React from "react";
-import products from "./products";
 import Image from "next/image";
 import Link from "next/link";
+import data from "@/app/data";
 
 export default function Products() {
   return (
     <Section title="Produtos" subtitle="A lista dos nossos produtos">
       <ul className="grid md:grid-cols-3 grid-cols-1 gap-6">
-        {products.map((product) => (
+        {data.products.map((product) => (
           <Link
-          href={`/p/${product.name}`}
-          key={product.name}
+          href={`/p/${product.slug}`}
+          key={product.slug}
           
           > 
           <li
-            className="hover:bg-zinc-800 bg-zinc-900 transition-all h-full p-4 flex flex-col gap-0.5 justify-center items-center"
+            className="relative hover:bg-zinc-800 bg-zinc-900 transition-all h-full p-4 flex flex-col gap-0.5 justify-center items-center"
           >
             <Image
               src={`/products/${product.image}`}
@@ -28,8 +28,12 @@ export default function Products() {
               {product.name}
             </span>
             <div className="flex items-center gap-2 font-mono">
-              <span className="text-xs line-through text-neutral-400">{product.oldPrice}€</span>
-              <span>{product.newPrice}€</span>
+              <span className="text-xs line-through text-neutral-400">{product.price}€</span>
+              <span>{Math.round(product.price - (product.price * (product.discount / 100)))}€</span>
+            </div>
+
+            <div className="absolute top-6 right-6 bg-primary text-black rounded-full px-4 font-mono text-sm">
+              {product.discount}% off
             </div>
           </li>
           </Link>
